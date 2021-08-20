@@ -16,12 +16,19 @@ const makerequest = () => {
   //     console.log(res);
   //   });
 
+  //   axios
+  //     .get("data1.txt")
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((error) => console.log(error));
+  // };
   axios
-    .get("data1.txt")
+    .get("data.txt")
     .then((res) => {
       console.log(res);
+      document.getElementById("divdata").innerText = res.data;
     })
     .catch((error) => console.log(error));
 };
-
 btn.addEventListener("click", makerequest);
